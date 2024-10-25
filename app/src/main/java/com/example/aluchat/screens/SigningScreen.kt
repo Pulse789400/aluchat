@@ -16,6 +16,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -24,13 +25,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.aluchat.R
 
 
-@Preview(showSystemUi = true)
+
 @Composable
-fun SignInScreen(){
-    val brush1=Brush.linearGradient(listOf(Color(0xFF2D93E2),Color(0xff255dcc)))
+fun SignInScreen(navController: NavController){
+    val brush1=Brush.linearGradient(listOf(Color(0xFF379BE9),Color(0xFF2A5CBE)))
 Image(painter = painterResource(id = R.drawable.login_blur), contentDescription = null, modifier = Modifier.fillMaxSize(),contentScale=ContentScale.Crop )
     Column (horizontalAlignment = Alignment.CenterHorizontally){
         Spacer(modifier = Modifier.height(20.dp))
@@ -42,16 +45,18 @@ Text(
     textAlign = TextAlign.Center,
     color = Color(0xff101010))
         Spacer(modifier = Modifier.height(60.dp))
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = {navController.navigate("ProfilePage") },
             modifier = Modifier
                 .background(brush1, CircleShape)
                 .fillMaxWidth(.7f)
                 .height(60.dp), colors = ButtonDefaults.buttonColors(Color.Transparent))
         {
-            Text(text = "Continue with Google", modifier = Modifier.padding(end = 20.dp))
+            Text(text = "Continue with Google", modifier = Modifier.padding(end = 20.dp), fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
+            Image(painter = painterResource(id = R.drawable.goog_0ed88f7c), contentDescription = "goolge", modifier = Modifier.scale(1.2f))
 
         }
     }
 
 
 }
+

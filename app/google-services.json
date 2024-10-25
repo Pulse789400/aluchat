@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436042132177",
+    "project_id": "aluchat-720f4",
+    "storage_bucket": "aluchat-720f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436042132177:android:ea49dfb9da1f2ddf9c73f0",
+        "android_client_info": {
+          "package_name": "com.example.aluchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCURs1l7zO6sh32XF6fcsyHQcRzPn-wj9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
